@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 3</title>
+</head>
+<body>
+    <form action="">
+       <fieldset>
+        <legend>Preferencias</legend>
+        <select name="velocidad" id="velocidad" multiple>
+            <option value="100_mbits">100 Mbits</option>
+            <option value="1000_mbits">1000 Mbits</option>
+        </select><br>
+
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni"><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="color">Elegir color:</label>
+        <input type="color" id="color" name="color"><br>
+
+        <textarea rows="6" cols="49">Por favor, escriba aquí</textarea>
+<br>
+        <input type="checkbox" name="procesador" value="procesadoramd">AMD <br>
+        <input type="checkbox" name="procesador" value="procesadorintel_i5"> Intel i5<br>
+        <input type="checkbox" name="procesador" value="procesadorintel_i7"> Intel i7<br>
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora"><br>
+
+        <label for="fichero">Elegir fichero:</label>
+        <input type="file" id="fichero" name="fichero">
+        <p>Red:</p>
+        <input type="radio" name="red" value="red2g"> 2G<br>
+        <input type="radio" name="red" value="red3g"> 3G<br>
+        <input type="radio" name="red" value="red4g"> 4G<br>
+
+        <textarea rows="8" cols="49"></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </fieldset>   
+    </form>
+</body>
+</html>
