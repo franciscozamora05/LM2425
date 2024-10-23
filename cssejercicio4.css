@@ -1,0 +1,11 @@
+/* Selector combinado: aplica estilos solo a los párrafos dentro del div */
+div p {
+    color: darkred;
+    font-size: 18px;
+}
+
+/* Encabezado resaltado */
+h3.resaltado {
+    background-color: yellow;
+    font-style: italic;
+}
