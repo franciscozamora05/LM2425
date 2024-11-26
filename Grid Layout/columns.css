@@ -1,0 +1,44 @@
+body {
+    background-color: antiquewhite;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid black;
+    background-color: lightgreen;
+    padding: 0;
+}
+
+.caja {
+    border: 4px solid black;
+    background-color: lightgray;
+    text-align: center;
+    line-height: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+.caja.c1 {
+    grid-column: span 4;
+    background-color: lightblue;
+}
+
+.caja.c2 {
+    grid-column: span 2;
+    background-color: lightyellow;
+}
+
+.caja.c3 {
+    grid-column: span 2;
+    background-color: lightcoral;
+}
+
+.caja.c12 {
+    grid-column: span 4;
+    background-color: teal;
+}
