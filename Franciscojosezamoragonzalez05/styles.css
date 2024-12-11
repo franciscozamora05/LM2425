@@ -1,0 +1,42 @@
+html{
+    min-height: 100vh;
+    color: #333;
+    font-family: Poppins, sans-serif;
+}
+header{
+    color: white;
+background-color: #4caf50;}
+h1{
+    font-size: 2.5rem;
+    font-family: lora;
+}
+footer{
+    background-color: #222;
+color: white;
+
+}
+.primeraletra::first-letter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff5722;
+  }
+.menu{
+position: sticky;
+background-color: #222; 
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+a{
+    text-align: center;
+    padding-inline: 0.5rem 1rem;
+    color: #ff5722;
+    text-decoration: none;
+
+}
+.emenu{
+    color: white;
+}
+.emenu:hover{
+    background-color: #ff5722;
+}

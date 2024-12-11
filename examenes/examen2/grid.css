@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&family=Ubuntu&display=swap');
+/* Importa las fuentes "Poppins" y "Ubuntu" desde Google Fonts */
+
+/* Reseteo general: elimina márgenes, padding y ajusta el box-sizing a border-box para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales para el body */
+body {
+    background-color: #eee; /* Fondo gris claro */
+    color: #434344; /* Texto gris oscuro */
+    font-family: "Poppins", sans-serif; /* Fuente principal */
+    font-weight: 500; /* Peso del texto */
+    text-align: justify; /* Alinea el texto con justificación */
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #434344; /* Mismo color que el texto general */
+    text-decoration: none; /* Elimina subrayado */
+}
+
+/* Estilos para el contenedor principal en formato Grid */
+.container {
+    max-width: 850px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 60px; /* Espaciado interno horizontal */
+    display: grid; /* Activa Grid Layout */
+    grid-template-columns: 1fr 3fr; /* Define dos columnas: 1 fracción y 3 fracciones */
+    grid-template-areas: /* Define áreas específicas del grid */
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-gap: 50px; /* Espacio entre los elementos del grid */
+    background-color: #fff; /* Fondo blanco */
+}
+
+/* Estilos para el Header */
+header {
+    grid-area: header; /* Ubica el header en el área correspondiente */
+    color: #908d8d; /* Color de texto */
+    text-transform: uppercase; /* Convierte texto a mayúsculas */
+    border-bottom: 5px dashed #0d6427; /* Línea inferior punteada */
+    padding: 20px 0; /* Espaciado interno */
+    display: grid; /* Activa Grid dentro del header */
+    grid-template-columns: 1fr 1fr; /* Define dos columnas iguales */
+}
+
+header nav {
+    justify-self: start; /* Alinea el menú de navegación a la izquierda */
+    list-style-type: none; /* Elimina viñetas de la lista */
+}
+
+header nav li {
+    margin-right: 15px; /* Espaciado entre elementos del menú */
+    display: inline-block; /* Coloca los elementos en línea */
+}
+
+header button {
+    justify-self: end; /* Alinea el botón a la derecha */
+    border: none; /* Sin borde */
+    padding: 8px 25px; /* Espaciado interno */
+    color: #fff; /* Texto blanco */
+    font-weight: 600; /* Peso del texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    border-radius: 1.25rem; /* Bordes redondeados */
+    background-color: #0d6427; /* Fondo verde */
+}
+
+/* Estilos para la sección principal (main) */
+.main {
+    grid-area: main; /* Ubica main en el área correspondiente */
+}
+
+.main h2 {
+    font-size: 32px; /* Tamaño del título */
+    margin: 1rem 0; /* Espaciado vertical */
+    color: #ada70a; /* Color del título */
+}
+
+.main p {
+    font-size: 1rem; /* Tamaño del texto */
+    margin-bottom: .75rem; /* Espaciado inferior entre párrafos */
+}
+
+.main img {
+    width: 100%; /* Imagen ocupa todo el ancho disponible */
+    border-radius: 30px; /* Bordes redondeados */
+}
+
+/* Estilos para la barra lateral (sidebar) */
+.sidebar {
+    grid-area: sidebar; /* Ubica sidebar en el área correspondiente */
+    padding: 20px; /* Espaciado interno */
+    border-top: 3px solid #0d6427; /* Línea superior */
+    background-color: #f9f9f9; /* Fondo gris muy claro */
+}
+
+.sidebar ul {
+    list-style-type: none; /* Elimina viñetas */
+    margin-top: 1rem; /* Espaciado superior */
+    font-size: .75rem; /* Tamaño del texto */
+}
+
+.sidebar ul > li {
+    padding: .25rem 0; /* Espaciado interno entre los ítems */
+}
+
+.logo {
+    font-size: 2rem; /* Tamaño del texto del logo */
+    margin-right: 1.5rem; /* Espaciado a la derecha */
+    color: #7d7905; /* Color del texto del logo */
+}
+
+/* Estilos para el Footer */
+footer {
+    grid-area: footer; /* Ubica footer en el área correspondiente */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Texto centrado */
+    padding: 20px 0; /* Espaciado interno */
+    background-color: #0d6427; /* Fondo verde */
+}
+
+footer p {
+    color: white; /* Color del texto */
+    font-size: 12px; /* Tamaño pequeño */
+    padding:
+}

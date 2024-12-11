@@ -1,0 +1,81 @@
+/* Elimina el padding y margen predeterminados de las etiquetas html y body */
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos para el body */
+body {
+    color: black; /* Texto negro */
+    background: url(bg.jpg) no-repeat center center fixed; /* Fondo con una imagen centrada y fija */
+    -webkit-background-size: cover; /* Escala la imagen de fondo para cubrir todo el área (WebKit) */
+    -moz-background-size: cover; /* Escala para Firefox */
+    -o-background-size: cover; /* Escala para Opera */
+    background-size: cover; /* Escala estándar para otros navegadores */
+    font-size: 200%; /* Tamaño de fuente aumentado al 200% */
+}
+
+/* Estilos para los campos de entrada (input) */
+input {
+    color: inherit; /* Hereda el color del texto del elemento padre */
+}
+
+/* Estilo para el texto de marcador de posición en los campos de entrada */
+input::placeholder {
+    font-size: 200%; /* Texto del marcador de posición también al 200% */
+}
+
+/* Estilos para el contenedor del formulario */
+.form {
+    position: absolute; /* Posiciona el formulario de manera absoluta */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el centro del formulario */
+    display: flex; /* Activa un contenedor flexbox */
+    justify-content: center; /* Centra los elementos hijos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una línea */
+    width: 80%; /* Ancho del formulario */
+}
+
+/* Estilos para los campos de entrada en el formulario */
+.form .entrada {
+    flex: 1 1 300px; /* Elementos flexibles con un tamaño base de 300px */
+    margin: 10px; /* Espaciado externo */
+    border: none; /* Sin borde */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #E6E6E6; /* Fondo gris claro */
+}
+
+/* Cambia el tamaño del elemento en el nth-child (no está activado por selector incorrecto) */
+.form .entrada:nth-child {
+    flex: 3 1 300px; /* Se especifica un tamaño mayor para este hijo (pero el selector no tiene efecto) */
+}
+
+/* Cambia el estilo al pasar el cursor o enfocar los campos de entrada */
+.form .entrada:hover,
+.form .entrada:focus {
+    outline: 5px solid #3759e2; /* Borde azul de 5px */
+}
+
+/* Botón de envío en el formulario */
+.form .form_submit {
+    position: relative; /* Posicionamiento relativo para animación */
+    flex: 1 1 100px; /* Tamaño base de 100px, adaptable */
+    margin: 10px; /* Espaciado externo */
+    cursor: pointer; /* Cambia el cursor al estilo de puntero */
+    border: none; /* Sin borde */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #3759e2; /* Fondo azul */
+    color: #FFFFFF; /* Texto blanco */
+    box-shadow: 8px 8px 8px rgba(226, 209, 12, 0.35); /* Sombra con efecto amarillo tenue */
+}
+
+/* Cambia el estilo del botón de envío al pasar el cursor o enfocar */
+.form .form_submit:hover,
+.form .form_submit:focus {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.35); /* Elimina la sombra */
+    top: 0; /* Resetea cualquier desplazamiento en la posición */
+}
