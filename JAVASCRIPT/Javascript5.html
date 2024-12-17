@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 5</title>
+    <style>
+        #caja {
+            border: 2px dashed green;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Utilidades de Javascript</h1>
+    <p id="parrafo">Javascript puede modificar el estilo</p>
+    <div id="caja">
+        texto
+    </div>
+    <button onclick="
+    document.getElementById('parrafo').style.color = 'red';
+    document.getElementById('parrafo').style.fontSize = '200%';
+    document.getElementById('caja').style.visibility = 'hidden';
+    document.getElementsByTagName('h1')[0].style.color = 'blue';
+    ">
+        Pulsa para cambiar el estilo
+    </button>
+</body>
+</html>
