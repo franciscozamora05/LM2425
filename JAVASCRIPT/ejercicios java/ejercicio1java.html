@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circulos</title>
+<style>
+    .contenedor{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .circulo{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        
+    }
+    
+    #rojo{
+        background-color: red;
+    }
+    #azul{
+        background-color: blue;
+    }
+     #verde{
+        background-color: green;
+    }
+</style>
+</head>
+<body>
+    <div class="contenedor">
+    <div class="circulo" id="rojo"></div>
+    <div class="circulo" id="azul"></div>
+    <div class="circulo" id="verde"></div>
+</div>
+    <div class="contenedor">
+     <button onclick="ocultar('rojo')">Ocultar</button>
+     <button onclick="ocultar('azul')">Ocultar</button>  
+     <button onclick="ocultar('verde')">Ocultar</button>  
+    </div>
+    
+</body>
+</html>
