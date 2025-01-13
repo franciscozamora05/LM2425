@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Moneda</title>
+  <script src="ejercicio2.js"></script>
+</head>
+<body>
+    <form>
+      Cantidad: <input type="number" id="cantidad"><br>
+      Convertir a:
+      <select id="tipo">
+        <option value="dolares">Dólares</option>
+        <option value="euros">Euros</option>
+      </select><br>
+      <button type="button" onclick="convertir()">Convertir</button>
+    </form>
+    <p id="resultado"></p>
