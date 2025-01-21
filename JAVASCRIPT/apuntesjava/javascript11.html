@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript 11</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<p>Prueba de variable local</p>
+<button onclick="pruebaVariableLocal()">Prueba</button>
+<p id="dentro"></p>
+<script>
+alert("Fuera de la función la variable a no existe y produce un error en esta línea" + a); 
+// Mira el inspector de código, consola
+function pruebaVariableLocal() {
+var a;
+a = 44;
+document.getElementById("dentro").innerHTML = "Dentro de la función la variable a vale " + a;
+}
+</script>
+</body>
+</html>
