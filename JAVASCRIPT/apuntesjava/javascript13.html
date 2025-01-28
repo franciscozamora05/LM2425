@@ -1,28 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabajando con arrays</title>
+    <meta charset="UTF-8"> // Define la codificación de caracteres como UTF-8 para admitir caracteres especiales como tildes y ñ.
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    // Configura el diseño para que sea responsivo, adaptándose al ancho del dispositivo.
+    <title>Trabajando con Arrays</title> // Título de la página que aparece en la pestaña del navegador.
 </head>
 <body>
-    <h1>Trabajando con arrays</h1>
-    <input type="text" id="entrada"><!--Aqui el usuario va a escribir algo-->
-    <p id="resultado"></p><!--Aqui se mostrará el resultado-->
-    <button onclick="anadir()">añadir</button>
-    <button onclick="sustraer()">sustraer</button>
+    <h1>Trabajando con arrays</h1> // Encabezado principal que describe el propósito de la página.
+
+    <input type="text" id="entrada"> 
+    // Campo de entrada de texto donde el usuario puede escribir un valor para agregar al array.
+
+    <p id="resultado"></p> 
+    // Párrafo vacío que mostrará el contenido actual del array.
+
+    <button onclick="anadir()">Añade</button> 
+    // Botón que ejecuta la función `anadir()` para agregar un valor al array.
+
+    <button onclick="sustraer()">Elimina</button> 
+    // Botón que ejecuta la función `sustraer()` para eliminar el último valor del array.
+
     <script>
-        let array = [];
-        function anadir(){
-            let entrada = document.getElementById("entrada").value;
-            let resultado = document.getElementById("resultado");
-            array.push(entrada);
-            resultado.innerHTML = array;
+        var array = []; 
+        // Inicializa un array vacío que será modificado dinámicamente por las funciones.
+
+        function anadir() {
+            // Función que añade un elemento al array.
+            var entrada = document.getElementById('entrada').value; 
+            // Obtiene el valor ingresado por el usuario en el campo de entrada.
+            
+            var resultado = document.getElementById('resultado'); 
+            // Referencia al párrafo donde se mostrará el contenido del array.
+
+            array.push(entrada); 
+            // Agrega el valor ingresado al final del array.
+
+            resultado.innerHTML = array; 
+            // Actualiza el contenido del párrafo `resultado` con los elementos del array.
         }
-        function sustraer(){
-            let resultado = document.getElementById("resultado")
-            array.pop();
-            resultado.innerHTML = array;
+
+        function sustraer() {
+            // Función que elimina el último elemento del array.
+            var resultado = document.getElementById('resultado'); 
+            // Referencia al párrafo donde se mostrará el contenido del array.
+
+            array.pop(); 
+            // Elimina el último elemento del array.
+
+            resultado.innerHTML = array; 
+            // Actualiza el contenido del párrafo `resultado` con los elementos restantes del array.
         }
     </script>
 </body>

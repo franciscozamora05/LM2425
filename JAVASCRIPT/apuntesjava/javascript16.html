@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Javascript 16</title> // Título de la página que aparece en la pestaña del navegador.
+    <meta charset="UTF-8"> // Define la codificación como UTF-8 para admitir caracteres especiales como tildes y ñ.
+</head>
+<body>
+    <p id="demo"></p> 
+    // Párrafo vacío donde se mostrará el día actual en texto.
+
+    <script>
+        var text; 
+        // Variable para almacenar el texto que describe el día actual.
+
+        var fecha = new Date(); 
+        // Crea un nuevo objeto `Date` que representa la fecha y hora actual.
+
+        switch (fecha.getDay()) {
+            // Utiliza el método `getDay()` del objeto `Date` para obtener el día de la semana como un número (0 a 6).
+            // 0 = Domingo, 1 = Lunes, ..., 6 = Sábado.
+
+            case 0:
+                text = "Hoy es domingo"; 
+                // Si el día es 0, asigna este texto.
+                break;
+
+            case 1:
+                text = "Hoy es lunes"; 
+                // Si el día es 1, asigna este texto.
+                break;
+
+            case 2:
+                text = "Hoy es martes"; 
+                // Si el día es 2, asigna este texto.
+                break;
+
+            case 3:
+                text = "Hoy es miércoles"; 
+                // Si el día es 3, asigna este texto.
+                break;
+
+            case 4:
+                text = "Hoy es jueves"; 
+                // Si el día es 4, asigna este texto.
+                break;
+
+            case 5:
+                text = "Hoy es viernes"; 
+                // Si el día es 5, asigna este texto.
+                break;
+
+            case 6:
+                text = "Hoy es sábado"; 
+                // Si el día es 6, asigna este texto.
+                break;
+
+            default:
+                text = "Deseando que llegue el finde"; 
+                // Este bloque no debería ejecutarse porque `getDay()` siempre devuelve un número entre 0 y 6.
+        }
+
+        // Muestra el texto en el elemento con id="demo".
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

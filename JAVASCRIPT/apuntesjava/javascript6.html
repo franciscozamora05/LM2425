@@ -1,24 +1,39 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Javascript 6</title>
-<meta charset="UTF-8">
-<style>
-#caja {
-height: 90px;
-line-height: 90px;
-text-align: center;
-border: 2px dashed #f69c55;
-}
-</style>
+    <title>Javascript 6</title>
+    <meta charset="UTF-8">
+
+    <style>
+        /* Estilos CSS para el elemento con id="caja" */
+        #caja {
+            height: 90px; /* Altura de la caja. */
+            line-height: 90px; 
+            /* Ajusta el contenido verticalmente centrado dentro de la caja. */
+            text-align: center; 
+            /* Alinea el texto horizontalmente al centro. */
+            border: 2px dashed #f69c55; 
+            /* Define un borde de línea discontinua (dashed) con un color específico. */
+        }
+    </style>
 </head>
 <body>
-<h1>Utilidades de JavaScript</h1>
-<div id="caja">Ahora estoy</div>
-<button type="button"
-onclick='document.getElementById("caja").style.display="none"'>Clic para
-ocultar la caja</button>
-<button type="button"
-onclick='document.getElementById("caja").style.display="block"'>Clic para
-mostrar la caja</button>
+    <h1>Utilidades de JavaScript</h1> 
+    /* Encabezado principal de la página.*/
+
+    <div id="caja">Ahora estoy</div> 
+    /* Div con id="caja" que será modificado por JavaScript. */
+
+    <button type="button"
+        onclick='document.getElementById("caja").style.display="none"'>
+        /* Botón que oculta el div con id="caja" al hacer clic. */
+        Clic para ocultar la caja
+    </button>
+
+    <button type="button"
+        onclick='document.getElementById("caja").style.display="block"'>
+        /* Botón que muestra nuevamente el div con id="caja" al hacer clic. */
+        Clic para mostrar la caja
+    </button>
 </body>
 </html>

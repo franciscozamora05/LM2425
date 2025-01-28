@@ -1,25 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Javascript 10</title>
-<meta charset="UTF-8">
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5. Ayuda a los navegadores a interpretar correctamente el código. -->
+<html> <!-- Inicia el documento HTML. -->
+<head> <!-- Contiene metadatos del documento (información que no se muestra directamente en la página). -->
+<title>Javascript 10</title> <!-- Establece el título de la página, que aparece en la pestaña del navegador. -->
+<meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8, lo que permite usar caracteres especiales como tildes y eñes. -->
 </head>
-<body>
-<p>Prueba de variable global</p>
-<button onclick="suma()">Incrementa</button>
-<button onclick="resta()">Decrementa</button>
-<p id="demo"></p>
-<script>
-var numero=1; // Variable declarada de manera global
-document.getElementById("demo").innerHTML = numero;
-function resta() {
-numero -=1;
-document.getElementById("demo").innerHTML = numero;
+<body> <!-- Representa el cuerpo del documento donde se colocan los elementos visibles y principales de la página. -->
+<p>Prueba de variable global</p> <!-- Muestra el texto "Prueba de variable global". -->
+<button onclick="suma()">Incrementa</button> <!-- Crea un botón que, al hacer clic, ejecuta la función "suma()" para incrementar el valor de la variable. -->
+<button onclick="resta()">Decrementa</button> <!-- Crea un botón que, al hacer clic, ejecuta la función "resta()" para decrementar el valor de la variable. -->
+<p id="demo"></p> <!-- Crea un párrafo donde se mostrará el valor de la variable "numero". -->
+<script> <!-- Inicia el bloque de código JavaScript. -->
+var numero=1; // Variable declarada de manera global con un valor inicial de 1.
+document.getElementById("demo").innerHTML = numero; // Muestra el valor inicial de la variable "numero" en el párrafo con id "demo".
+function resta() {  // Define la función "resta" que se ejecuta cuando se hace clic en el botón "Decrementa".
+numero -=1;  // Decrementa el valor de la variable "numero" en 1.
+document.getElementById("demo").innerHTML = numero;  // Actualiza el contenido del párrafo con el nuevo valor de "numero".
 }
-function suma() {
-numero +=1;
-document.getElementById("demo").innerHTML = numero;
+function suma() {  // Define la función "suma" que se ejecuta cuando se hace clic en el botón "Incrementa".
+numero +=1;  // Incrementa el valor de la variable "numero" en 1.
+document.getElementById("demo").innerHTML = numero;  // Actualiza el contenido del párrafo con el nuevo valor de "numero".
 }
-</script>
+</script> <!-- Finaliza el bloque de código JavaScript. -->
 </body>
-</html>
+</html> <!-- Cierra el documento HTML. -->

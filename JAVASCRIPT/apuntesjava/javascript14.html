@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript 14</title> // Título de la página que aparece en la pestaña del navegador.
+    <meta charset="UTF-8"> // Define la codificación como UTF-8 para admitir caracteres especiales como tildes y ñ.
+</head>
+<body>
+    <h1>Objetos</h1> // Encabezado principal que describe el tema de la página.
+
+    <p id="nombre"></p> // Párrafo vacío donde se mostrará el nombre del coche.
+    <p id="tipoCombustible"></p> // Párrafo vacío donde se mostrará el tipo de combustible del coche.
+    <p id="velocidad"></p> // Párrafo vacío donde se mostrará la velocidad del coche.
+    <p id="estado"></p> // Párrafo vacío donde se mostrará el estado actual del coche.
+
+    <script>
+        // Definición de un objeto `coche` con propiedades y métodos.
+        var coche = {
+            // Propiedades del coche.
+            nombre: "BMW", // Nombre del coche.
+            tipoCombustible: "Gasolina", // Tipo de combustible del coche.
+            cantidadCombustible: 0, // Cantidad de combustible inicial.
+            velocidad: 0, // Velocidad inicial.
+            modelo: "318", // Modelo del coche.
+            potencia: 135, // Potencia del coche en caballos de fuerza.
+            peso: 815, // Peso del coche en kilogramos.
+            color: "azul", // Color del coche.
+            estado: "Detenido", // Estado inicial del coche.
+
+            // Métodos del coche.
+            repostar: function(n) {
+                // Método para asignar una cantidad de combustible.
+                this.cantidadCombustible = n;
+            },
+            arrancar: function() {
+                // Método para cambiar el estado a "En marcha".
+                this.estado = "En marcha";
+            },
+            detener: function() {
+                // Método para cambiar el estado a "Detenido".
+                this.estado = "Detenido";
+            },
+            frenar: function() {
+                // Método para cambiar el estado a "Frenando".
+                this.estado = "Frenando";
+            },
+            acelerar: function(n) {
+                // Método para asignar una velocidad y cambiar el estado a "En marcha".
+                this.velocidad = n;
+                this.estado = "En marcha";
+            }
+        };
+
+        // Mostrar las propiedades del objeto `coche` en elementos del HTML.
+        document.getElementById("nombre").innerHTML = coche.nombre; // Muestra el nombre del coche.
+        document.getElementById("tipoCombustible").innerHTML = coche.tipoCombustible; // Muestra el tipo de combustible.
+
+        // Usar el método `acelerar` para establecer una velocidad de 120.
+        coche.acelerar(120);
+
+        // Mostrar la velocidad y el estado actual del coche después de acelerar.
+        document.getElementById("velocidad").innerHTML = coche.velocidad; // Muestra la velocidad.
+        document.getElementById("estado").innerHTML = coche.estado; // Muestra el estado.
+    </script>
+</body>
+</html>

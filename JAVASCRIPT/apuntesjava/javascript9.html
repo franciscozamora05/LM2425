@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Javascript 9</title>
-<meta charset="UTF-8">
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5. Ayuda a los navegadores a interpretar correctamente el código. -->
+<html> <!-- Inicia el documento HTML. -->
+<head> <!-- Contiene metadatos del documento (información que no se muestra directamente en la página). -->
+<title>Javascript 9</title> <!-- Establece el título de la página, que aparece en la pestaña del navegador. -->
+<meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8, lo que permite usar caracteres especiales como tildes y eñes. -->
 </head>
-<body>
-<h1>Escribe tu nombre</h1>
-<input id="entradaTexto" type="textbox">
-<button onclick="saludo()">Login</button>
-<script>
-function saludo() {
-var cadena;
-cadena = document.getElementById("entradaTexto").value;
-alert('Bienvenido '+cadena);
+<body> <!-- Representa el cuerpo del documento donde se colocan los elementos visibles y principales de la página. -->
+<h1>Escribe tu nombre</h1> <!-- Muestra un encabezado de nivel 1 con el texto "Escribe tu nombre". -->
+<input id="entradaTexto" type="textbox"> <!-- Crea un campo de texto donde el usuario puede ingresar su nombre. El id es "entradaTexto". -->
+<button onclick="saludo()">Login</button> <!-- Crea un botón que, al hacer clic, ejecuta la función "saludo()". -->
+<script> <!-- Inicia el bloque de código JavaScript. -->
+function saludo() { //Define la función "saludo". -->
+var cadena; //Declara una variable "cadena" para almacenar el valor ingresado. -->
+cadena = document.getElementById("entradaTexto").value; //Obtiene el valor del campo de texto (lo que el usuario escribió) y lo asigna a la variable "cadena". -->
+alert('Bienvenido '+cadena); // Muestra una alerta con el mensaje "Bienvenido" seguido del texto ingresado por el usuario. -->
 }
-</script>
+</script> <!-- Finaliza el bloque de código JavaScript. -->
 </body>
-</html>
+</html> <!-- Cierra el documento HTML. -->

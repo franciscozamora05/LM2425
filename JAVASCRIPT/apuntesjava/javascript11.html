@@ -1,21 +1,27 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
-<title>Javascript 11</title>
-<meta charset="UTF-8">
+    <title>Javascript 11</title> // Define el título de la página, que se mostrará en la pestaña del navegador.
+    <meta charset="UTF-8"> // Especifica que la codificación de caracteres es UTF-8, permitiendo usar caracteres especiales como tildes y ñ.
 </head>
 <body>
-<p>Prueba de variable local</p>
-<button onclick="pruebaVariableLocal()">Prueba</button>
-<p id="dentro"></p>
-<script>
-alert("Fuera de la función la variable a no existe y produce un error en esta línea" + a); 
-// Mira el inspector de código, consola
-function pruebaVariableLocal() {
-var a;
-a = 44;
-document.getElementById("dentro").innerHTML = "Dentro de la función la variable a vale " + a;
-}
-</script>
+    <p>Prueba de variable local</p> // Texto de introducción que aparece en la página.
+    <button onclick="pruebaVariableLocal()">Prueba</button> // Botón que ejecuta la función `pruebaVariableLocal` al hacer clic.
+    <p id="dentro"></p> // Párrafo vacío con un ID `dentro`, donde se mostrará el resultado de la función.
+
+    <script>
+        // Línea de alerta que intenta acceder a la variable `a` antes de su declaración:
+        alert("Fuera de la función la variable a no existe y produce un error en esta línea" + a); 
+        // El código mostrará un error porque la variable `a` no está declarada en este ámbito (global).
+
+        function pruebaVariableLocal() { 
+            // Función que se ejecuta al presionar el botón.
+            var a; // Declaración de la variable local `a` (solo existe dentro de esta función).
+            a = 44; // Asignación de valor a la variable `a`.
+            
+            // Modifica el contenido del párrafo con ID `dentro` para mostrar el valor de `a`:
+            document.getElementById("dentro").innerHTML = "Dentro de la función la variable a vale " + a;
+        }
+    </script>
 </body>
 </html>

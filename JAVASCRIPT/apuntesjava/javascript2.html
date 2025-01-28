@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript 2</title>
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5. Ayuda a los navegadores a interpretar correctamente el código. -->
+<html> <!-- Inicia el documento HTML. -->
+<head> <!-- Contiene metadatos del documento (información que no se muestra directamente en la página). -->
+<title>Javascript 2</title> <!-- Establece el título de la página, que aparece en la pestaña del navegador. -->
+<meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8, lo que permite usar caracteres especiales como tildes y eñes. -->
 </head>
-<body>
-    <script>
-        function saludo(){
-            alert('Hola desde Javascript')
-        }
-    </script>
-    
-    <h1>Javascript interno</h1>
-    <button onclick="saludo()">
-        Click aqui para ejecutar código
-    </button>
+<body> <!-- Representa el cuerpo del documento donde se colocan los elementos visibles y principales de la página. -->
+<h1>JavaScript interno</h1> <!-- Muestra un encabezado de nivel 1 con el texto "JavaScript interno". -->
+<button onclick="saludo()"> <!-- Crea un botón que, al hacer clic, ejecuta la función "saludo()". -->
+Pincha aquí para ver el pop-up.</button> <!-- Es el texto visible en el botón que invita al usuario a hacer clic. -->
+<script> <!-- Inicia el bloque de código JavaScript. -->
+function saludo() { alert('Hola mundo en Javascript!');} <!-- Define la función "saludo" que muestra una alerta con el mensaje "Hola mundo en Javascript!" cuando se ejecuta. -->
+</script> <!-- Finaliza el bloque de código JavaScript. -->
 </body>
-</html>
+</html> <!-- Cierra el documento HTML. -->
