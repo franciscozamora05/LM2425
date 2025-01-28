@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Define el conjunto de caracteres como UTF-8 para asegurar que se muestren correctamente caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Asegura que el contenido se ajuste correctamente a dispositivos móviles -->
+    <title>Expediente académico</title> <!-- Título de la página que se muestra en la pestaña del navegador -->
+</head>
+<body>
+
+    <script>
+        // Función que se ejecuta cuando el usuario hace clic en el botón para mostrar el resumen del expediente
+        function resumen() {
+            // Obtiene los valores introducidos por el usuario para los diferentes campos
+            var nombre = document.getElementById("nombre").value; // Nombre del estudiante
+            var curso = document.getElementById("curso").value;   // Curso (año)
+            
+            // Variables para contar la cantidad de asignaturas aprobadas y suspensas
+            var aprobado = 0;
+            var suspenso = 0;
+            var media;
+            
+            // Obtiene las calificaciones introducidas por el usuario para cada asignatura
+            var iso = parseFloat(document.getElementById("iso").value); 
+            var redes = parseFloat(document.getElementById("redes").value);
+            var basedatos = parseFloat(document.getElementById("basedatos").value);
+            var lenguaje = parseFloat(document.getElementById("lenguaje").value);
+            var fundamento = parseFloat(document.getElementById("fundamento").value);
+            var fol = parseFloat(document.getElementById("fol").value);
+            var digitalizacion = parseFloat(document.getElementById("digitalizacion").value);
+            var sostenibilidad = parseFloat(document.getElementById("sostenibilidad").value);
+
+            // Si el curso no es un número válido, muestra un mensaje de error
+            if (isNaN(curso)) {
+                alert("Por favor introduzca un curso válido");
+            } else {
+                // Muestra el nombre y curso del usuario en la página
+                document.getElementById("mostrarcurso").innerHTML = curso;
+                document.getElementById("mostrarnombre").innerHTML = nombre;
+            }
+
+            // Si alguna de las notas no es un número válido, muestra un mensaje de error
+            if (isNaN(iso) || isNaN(redes) || isNaN(basedatos) || isNaN(lenguaje) || isNaN(fundamento) || isNaN(fol) || isNaN(digitalizacion) || isNaN(sostenibilidad)) {
+                alert("Por favor, introduzca correctamente sus notas.");
+            } else {
+                // Comprobación de si las asignaturas están aprobadas o suspendidas
+                // Si la calificación es menor que 5, se cuenta como suspenso, si es igual o mayor, como aprobado
+                
+                // Implantación de Sistemas Operativos
+                if (iso < 5) {
+                    suspenso = suspenso + 1;
+                } else {
+                    aprobado = aprobado + 1;
+                }
+
+                // Redes Área Local
+                if (redes < 5) {
+                    suspenso = suspenso + 1;
+                } else {
+                    aprobado = aprobado + 1;
+                }
+
+                // Base de Datos
+                if (basedatos < 5) {
+                    suspenso = suspenso + 1;
+                } else {
+                    aprobado = aprobado + 1;
+                }
+
+                // Lenguaje de Marcas
+                if (lenguaje < 5) {
+                    suspenso = suspenso + 1;
+                } else {
+                    aprobado = aprobado + 1;
+                }
+
+                // Fundamentos Hardware
+                if (fundamento < 5) {
+                    suspenso = suspenso + 1;
+                } else {
+                    aprobado = aprobado + 1;
+                }
+
+                // Formación Orientativa Laboral (FOL)
+                if (fol < 5) {
+                    suspenso = suspenso + 1;
+                } else {
+                    aprobado = aprobado + 1;
+                }
+
+                // Digitalización
+                if (digitalizacion < 5) {
+                    suspenso = suspenso + 1;
+                } else {
+                    aprobado = aprobado + 1;
+                }
+
+                // Sostenibilidad
+                if (sostenibilidad < 5) {
+                    suspenso = suspenso + 1;
+                } else {
+                    aprobado = aprobado + 1;
+                }
+
+                // Calcula la media de todas las notas
+                media = (iso + redes + basedatos + lenguaje + fundamento + fol + digitalizacion + sostenibilidad) / 8;
+            }
+
+            // Muestra la cantidad de asignaturas aprobadas, suspendidas y la media
+            document.getElementById("aprobadosuspenso").innerHTML = "Has aprobado " + aprobado + " asignaturas, y suspendido " + suspenso;
+            document.getElementById("media").innerHTML = "Su media actual es de: " + media;
+        }
+    </script>
+
+    <!-- Título que se actualizará dinámicamente con el curso y el nombre del usuario -->
+    <h3>Expediente académico año <span id="mostrarcurso"></span> de: <span id="mostrarnombre"></span></h3>
+    
+    <!-- Campos de entrada para el nombre y el curso -->
+    <p>Nombre: </p>
+    <input type="text" id="nombre">
+    
+    <p>Curso: </p>
+    <input type="text" id="curso" placeholder="2000/01">
+    
+    <!-- Campos para ingresar las notas de las asignaturas -->
+    <p>Implantación de Sistemas Operativos:</p>
+    <input type="text" id="iso">
+    
+    <p>Redes Área Local:</p>
+    <input type="text" id="redes">
+    
+    <p>Base de Datos:</p>
+    <input type="text" id="basedatos">
+    
+    <p>Lenguaje de Marcas:</p>
+    <input type="text" id="lenguaje">
+    
+    <p>Fundamentos Hardware:</p>
+    <input type="text" id="fundamento">
+    
+    <p>Formación Orientativa Laboral:</p>
+    <input type="text" id="fol">
+    
+    <p>Digitalización:</p>
+    <input type="text" id="digitalizacion">
+    
+    <p>Sostenibilidad:</p>
+    <input type="text" id="sostenibilidad">
+    
+    <!-- Botón que ejecutará la función resumen() al hacer clic -->
+    <button onclick="resumen()">Mostrar expediente final</button>
+    
+    <!-- Aquí se mostrará el número de asignaturas aprobadas y suspendidas y la media -->
+    <h4 id="aprobadosuspenso"></h4>
+    <h4 id="media"></h4>
+
+</body>
+</html>

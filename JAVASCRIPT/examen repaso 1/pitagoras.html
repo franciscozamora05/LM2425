@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula la Hipotenusa</title>
+</head>
+<body>
+    <h2>Calcula la Hipotenusa de un Triángulo Rectángulo</h2>
+    <!-- Input para el primer cateto -->
+    <p>Longitud del primer cateto (cateto1):</p>
+    <input type="text" id="cateto1" step="0.01" placeholder="Ejemplo: 3.5" required>
+    
+    <!-- Input para el segundo cateto -->
+    <p>Longitud del segundo cateto (cateto2):</p>
+    <input type="text" id="cateto2" step="0.01" placeholder="Ejemplo: 4.2" required>
+    
+    <!-- Botón que ejecutará la función para calcular la hipotenusa -->
+    <button type="button" onclick="calcularHipotenusa()">Calcular</button>
+    
+    <!-- Aquí se mostrará el resultado de la hipotenusa -->
+    <p id="resultado"></p>
+
+<script>
+    // Función para calcular la hipotenusa
+    function calcularHipotenusa() {
+        // Obtener los valores de los catetos introducidos por el usuario
+        let cateto1 = parseFloat(document.getElementById('cateto1').value);  // Convertimos el valor del primer cateto a número decimal
+        let cateto2 = parseFloat(document.getElementById('cateto2').value);  // Convertimos el valor del segundo cateto a número decimal
+        let hipotenusa;  // Variable para almacenar el resultado de la hipotenusa
+
+        // Validación para asegurarse de que ambos catetos sean números positivos
+        if (isNaN(cateto1) || isNaN(cateto2) || cateto1 <= 0 || cateto2 <= 0) {
+            alert("Por favor, introduce valores válidos y mayores a 0.");  // Muestra una alerta si algún cateto no es válido
+        } else {
+            // Si los valores son válidos, calculamos la hipotenusa usando el Teorema de Pitágoras: c^2 = a^2 + b^2
+            hipotenusa = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2)); // sqrt(x) calcula la raíz cuadrada de x, y pow(x,2) eleva x al cuadrado
+        }
+
+        // Mostrar el resultado de la hipotenusa en el elemento con id="resultado"
+        document.getElementById("resultado").innerHTML = 'La longitud de la hipotenusa es: ' + hipotenusa.toFixed(2) + " unidades";
+        // .toFixed(2) redondea el resultado a dos decimales para una presentación más limpia
+    }
+</script>
+</body>
+</html>

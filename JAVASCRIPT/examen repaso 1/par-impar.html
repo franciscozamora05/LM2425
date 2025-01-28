@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par o impar</title>
+</head>
+<body>
+    <script>
+        // La función "resultado" se ejecuta cuando el usuario hace clic en el botón
+        function resultado() 
+        {
+            // Obtenemos el valor introducido en el campo de texto con id="numero"
+            // Usamos parseInt() para convertir ese valor en un número entero
+            var numero = parseInt(document.getElementById("numero").value);
+            
+            // Usamos el operador % (módulo) para obtener el residuo de la división entre el número y 2
+            // Si el residuo es 0, el número es par, si es 1, el número es impar
+            var comprobador = numero % 2;
+            
+            // Declaramos la variable "resultado", aunque en este caso no la utilizamos más
+            var resultado;
+
+            // Verificamos si el valor introducido no es un número
+            // Si no es un número, mostramos una alerta pidiendo que se ingrese un número válido
+            if (isNaN(numero)) 
+            {
+                alert("Por favor, introduzca un número");
+            }
+            else 
+            {
+                // Si el residuo de la división por 2 es igual a 1, el número es impar
+                // Si es 0, el número es par
+                if (comprobador == 1) 
+                {
+                    // Mostramos el mensaje "El número introducido es impar" en el elemento con id="parimpar"
+                    document.getElementById("parimpar").innerHTML = "El número introducido es impar.";
+                }
+                else
+                {
+                    // Si el residuo es 0, el número es par, y mostramos el mensaje correspondiente
+                    document.getElementById("parimpar").innerHTML = "El número introducido es par.";
+                }
+            }
+        }
+    </script>
+
+    <!-- Título principal de la página -->
+    <h1>Par o impar</h1>
+    
+    <!-- Párrafo que indica al usuario que debe introducir un número -->
+    <p>Introduce un número:</p>
+    
+    <!-- Campo de entrada donde el usuario introduce el número a comprobar -->
+    <input type="text" id="numero">
+    
+    <!-- Botón que ejecuta la función "resultado()" al hacer clic -->
+    <button onclick="resultado()">Comprobar número</button>
+    
+    <!-- Este es el área donde se mostrará si el número es par o impar -->
+    <h4 id="parimpar"></h4>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Define el conjunto de caracteres como UTF-8 para asegurar una correcta visualización de caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permite que la página se ajuste al tamaño de pantalla del dispositivo -->
+    <title>Área del círculo</title> <!-- Título que aparecerá en la pestaña del navegador -->
+</head>
+<body>
+    <script>
+        // Función que calcula el área de un círculo
+        function calculo () {
+            // Obtiene el valor ingresado en el campo de texto con id "radio" y lo convierte a número de punto flotante
+            var radio = parseFloat(document.getElementById("radio").value);
+            var total; // Variable para almacenar el resultado del cálculo del área
+            // Verifica si el valor de radio es un número válido
+            if (isNaN(radio)) {
+                // Si no es un número, muestra una alerta indicando que debe introducir un valor numérico
+                alert("Por favor, introduzca valor numérico");
+            }
+            else {
+                // Si el valor es válido, calcula el área del círculo utilizando la fórmula: A = π * r²
+                total = (Math.PI * Math.pow(radio, 2));
+                // Muestra el resultado en el elemento con id "resultadofinal", redondeando el área a dos decimales
+                document.getElementById("resultadofinal").innerHTML = "El área del círculo es: " + total.toFixed(2);
+            }
+        }
+    </script>
+
+    <!-- Texto de instrucciones para el usuario -->
+    <p>Inserte el radio de su círculo:</p>
+    <!-- Campo de texto donde el usuario debe ingresar el radio del círculo -->
+    <input type="text" id="radio">
+    <!-- Botón que ejecuta la función "calculo()" cuando se hace clic en él -->
+    <button onclick="calculo()">Calcular área</button>
+    <!-- Aquí se mostrará el resultado del cálculo -->
+    <h4 id="resultadofinal"></h4>
+</body>
+</html>

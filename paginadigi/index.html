@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios en la Nube</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carousel-item {
+            height: 500px;
+        }
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+        }
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .carousel-caption h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        .carousel-caption p {
+            color: white;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=2000" class="d-block w-100" alt="IaaS">
+                    <div class="carousel-caption">
+                        <h3>Infraestructura como servicio (IaaS)</h3>
+                        <p>IaaS ofrece acceso bajo demanda a servicios de infraestructura informática, como computación, almacenamiento, redes y virtualización. Se asemeja más a los recursos informáticos tradicionales. Algunos ejemplos son: Google Compute Engine, Azure Virtual Machines o Amazon EC2.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000" class="d-block w-100" alt="PaaS">
+                    <div class="carousel-caption">
+                        <h3>Plataforma como servicio (PaaS)</h3>
+                        <p>PaaS ofrece todos los recursos de hardware y software necesarios para desarrollar aplicaciones en la nube, sin la carga que supone gestionar y mantener la infraestructura subyacente. Algunos ejemplos incluyen Google App Engine, Azure App Engine o Salesforce.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&q=80&w=2000" class="d-block w-100" alt="SaaS">
+                    <div class="carousel-caption">
+                        <h3>Software como servicio (SaaS)</h3>
+                        <p>El software como servicio (SaaS) proporciona un completo abanico de aplicaciones, desde la infraestructura subyacente hasta el mantenimiento y las actualizaciones del propio software. Algunos ejemplos son: Amazon Web Services, Google Workspace o Microsoft 365.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
