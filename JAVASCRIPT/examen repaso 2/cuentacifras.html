@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta cifras</title>
+</head>
+<body>
+    <script>
+        // Función que se ejecuta cuando el usuario hace clic en el botón
+        function cifras()
+        {
+            // Se obtiene el valor del campo de entrada "num" donde el usuario ingresa el número
+            var numero = document.getElementById("num").value;
+            
+            // Validación: Si el valor ingresado no es un número o es menor o igual a 0, muestra una alerta
+            if (isNaN(numero) || numero <= 0)
+            {
+                // Si no es un número o es negativo, se muestra un mensaje pidiendo un número válido
+                alert("Por favor introduzca un número válido (entero y positivo)");
+                return; // Se detiene la ejecución de la función si la validación falla
+            }
+
+            // Si la validación pasa, se cuenta la longitud del número (como cadena de texto)
+            total = numero.length;
+
+            // Se muestra el resultado en el elemento con id "mostrar"
+            document.getElementById("mostrar").innerHTML = "El nº introducido contiene " + total + " cifras";
+        }
+        // Nota: No es necesario convertir el número a entero, ya que estamos trabajando con cadenas de texto.
+        // Al ser una cadena, podemos usar la propiedad .length para contar las cifras.
+    </script>
+
+    <!-- Título de la página -->
+    <h1>Introduzca un número</h1>
+
+    <!-- Campo de entrada de texto donde el usuario escribe el número -->
+    <input type="text" id="num" placeholder="1234">
+
+    <!-- Botón que al hacer clic ejecuta la función cifras() -->
+    <button onclick="cifras()">Mostrar número de cifras</button>
+
+    <!-- Aquí se mostrará el resultado del número de cifras -->
+    <h4 id="mostrar"></h4>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    <script>
+        // Función para calcular el factorial
+        function factorial()
+        {
+            // Obtener el valor del número introducido por el usuario y convertirlo a un entero
+            var numero = parseInt(document.getElementById("num").value);
+            
+            // Inicializamos la variable total en 1, ya que el factorial de 0 o 1 es 1
+            var total = 1;
+
+            // Validamos que el número introducido sea un entero positivo
+            if (isNaN(numero) || numero <= 0)
+            {
+                // Si el número no es válido, se muestra una alerta pidiendo un número entero y positivo
+                alert("Por favor introduzca un número válido (entero y positivo)");
+                return; // Terminamos la ejecución de la función si la validación falla
+            }
+
+            // Bucle 'for' para calcular el factorial. Recorremos todos los números desde 1 hasta el número ingresado
+            for (var i = 1; i <= numero; i++)    
+            {  
+                // Multiplicamos el total por cada número desde 1 hasta el número ingresado
+                total = total * i; // También se podría usar total *= i; para abreviar
+            }
+
+            // Mostramos el resultado del cálculo en el HTML, dentro del elemento con id "resultado"
+            document.getElementById("resultado").innerHTML = "El resultado factorial es " + total;
+        }
+    </script>
+    <!-- Título de la página -->
+    <h1>Calcule su número factorial</h1>
+    
+    <!-- Campo de entrada donde el usuario introduce el número para calcular su factorial -->
+    <input type="text" id="num" placeholder="5">
+    
+    <!-- Botón que ejecuta la función factorial() al hacer clic -->
+    <button onclick="factorial()">Ver factorial</button>
+    
+    <!-- Aquí se mostrará el resultado del cálculo del factorial -->
+    <h4 id="resultado"></h4>
+</body>
+</html>

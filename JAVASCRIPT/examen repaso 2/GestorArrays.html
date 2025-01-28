@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor</title>
+    <!-- Se incluye el archivo JavaScript donde se encuentran las funciones de gestión -->
+    <script src="gestor.js"></script>
+</head>
+<body>
+    <h1>Gestión de números</h1>
+
+    <!-- Campo de entrada para que el usuario ingrese un número -->
+    <p>Introduzca un número</p>
+    <input type="text" id="num" placeholder="23">
+
+    <!-- Botones que ejecutan las funciones de añadir, ordenar y calcular la media -->
+    <button onclick="anadir()">Añadir número a la lista</button>
+    <button onclick="ordenar()">Ordenar y mostrar en pantalla</button>
+    <button onclick="media()">Realizar media</button>
+
+    <!-- Secciones para mostrar los resultados de las acciones -->
+    <h4 id="final"></h4> <!-- Aquí se mostrará el número añadido o la lista ordenada -->
+    <h4 id="media"></h4> <!-- Aquí se mostrará la media de los números -->
+</body>
+</html>

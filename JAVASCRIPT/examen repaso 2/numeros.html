@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números</title>
+    <script src="numeros.js"></script> /* Se incluye el archivo de JavaScript donde se encuentran las funciones */
+</head>
+<body>
+    <h1>Gestión de números</h1> /* Título de la página */
+
+    <p>Introduce los números:</p> /* Instrucciones para el usuario */
+
+    <input type="text" id="num" placeholder="45"> /* Campo de texto para introducir el número */
+
+    <button onclick="anadir()">Añadir número</button> /* Botón para añadir número a la lista */
+    <button onclick="suma()">Sumar números</button> /* Botón para realizar la suma de los números */
+    <button onclick="mayor()">Mayor nº</button> /* Botón para mostrar el número mayor */
+    <button onclick="menor()">Menor nº</button> /* Botón para mostrar el número menor */
+    <button onclick="completo()">Mostrar lista completa</button> /* Botón para mostrar la lista completa de números */
+
+    <h4 id="ultimo"></h4>  /* Muestra el último número añadido */
+    <h4 id="total"></h4>   /* Muestra la suma total de los números */
+    <h4 id="maximo"></h4>  /* Muestra el número mayor */
+    <h4 id="menor"></h4>   /* Muestra el número menor */
+    <h4 id="lista"></h4>   /* Muestra la lista completa de números */
+</body>
+</html>
