@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JavaScript.js"></script>
+    <title>Calculadora de Propina</title>
+</head>
+<body>
+    <h2>Calculadora de Propina</h2>
+    <label for="monto">Monto total de la cuenta:</label>
+    <input type="number" id="monto" placeholder="Ingrese el monto" min="0"><br><br>
+    
+    <label>Seleccione la propina:</label><br>
+    <input type="radio" name="propina" value="0" checked> Sin propina<br>
+    <input type="radio" name="propina" value="0.05"> Propina del 5%<br>
+    <input type="radio" name="propina" value="0.10"> Propina del 10%<br>
+    <input type="radio" name="propina" value="0.15"> Propina del 15%<br><br>
+    
+    <button onclick="calcularTotal()">Calcular Total</button>
+    <p id="resultado"></p>
+</body>
+</html>

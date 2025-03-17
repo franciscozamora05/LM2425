@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <script src="JavaScript2.js" defer></script>
+</head>
+<body>
+    <h2>Gestor de Tareas</h2>
+    <input type="text" id="tarea" placeholder="Ingrese una tarea">
+    <button onclick="agregarTarea()">Agregar Tarea</button>
+    <button onclick="eliminarUltimaTarea()">Eliminar Última Tarea</button>
+    <br><br>
+    <input type="text" id="buscar" placeholder="Buscar tarea">
+    <button onclick="buscarTarea()">Buscar</button>
+    <p id="resultadoBusqueda"></p>
+    <h3>Lista de Tareas:</h3>
+    <ul id="listaTareas"></ul>
+</body>
+</html>
