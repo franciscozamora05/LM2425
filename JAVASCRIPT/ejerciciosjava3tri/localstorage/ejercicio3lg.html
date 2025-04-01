@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Tareas</title>
+</head>
+<body>
+    <h1>Lista Tareas</h1>
+    <input type="text" id="entrada" placeholder="Escribe una tarae...">
+    <button onclick="agregarTarea()">Agregar</button>
+    <p id="tareas"></p>
+    <script>
+        let ArrayTareas = []
+        function agregarTarea(){
+let entrada = document.getElementById("entrada").value;
+ArrayTareas.push(entrada);
+if (entrada!="") {
+    localStorage.setItem("tareas", JSON.stringify(ArrayTareas));
+    document.getElementById("tareas").innerHTML = ArrayTareas;
+}
+        }
+        function cargaListaTareas(){
+            let ArrayTareas = JSON.parse(localStorage.getItem("tareas"))
+            let tareas = localStorage.getItem("tareas")
+            if(tareas !=null){
+                document.getElementById("tareas").innerHTML = ArrayTareas
+            } else{
+                document.getElementById("tareas").innerHTML = 'No hay tareas'
+            }
+        }
+        window.onload = cargaListaTareas;
+    </script>
+</body>
+</html>
