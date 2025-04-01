@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumatorio</title>
+</head>
+<body>
+    <input type="text" id="n" placeholder="Introduce número"><br>
+    <button onclick="calcular()">¡Sumatorio!</button>
+    <script>
+        function calcular(){
+            let n = document.getElementById('n').value;
+            let x = 0;
+            let y = 0;
+            if (isNaN(n)){
+                document.write("Introduce un número válido");
+            }
+            else if (n<0){
+                document.write("Introduce un número positivo");
+            }
+            else{
+                for (x=1;x<=n;x++)
+                {
+                    document.write(x + " "); 
+                    y = y + x;
+                }
+                document.write("<br>");
+                document.write(y);
+            }
+        }
+    </script>
+</body>
+</html>

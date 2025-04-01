@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IES Isbilya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+ <table border="0" cellpadding="0">
+     <h1>IES Isbilya</h1>
+  <tr>
+    <td width="100%"><img src="s1.jpg" id="fotoActual"></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <form>
+      <div align="center">
+          <input type="button" value="Atrás" onClick="atras()">
+          <input type="button" value="Siguiente" onClick="siguiente()">
+          <br>
+        </div>
+    </form>
+    </td>
+  </tr>
+</table>  
+<script>
+    var fotos = ["s0.jpg", "s1.jpg", "s2.jpg", "s3.jpg", "s4.jpg"];
+    var indice = 1; // Inicializamos el índice en 1 ya que la imagen inicial es "s1.jpg"
+    var totalFotos = fotos.length;
+
+    function atras() {
+        if (indice == 0) { 
+            indice = totalFotos - 1; // Si estamos en la primera, vamos a la última
+        } else {
+            indice = indice - 1; // Retrocedemos una imagen
+        }
+        document.getElementById("fotoActual").src = fotos[indice];
+    }
+
+    function siguiente() {
+        if (indice == totalFotos - 1) {
+            indice = 0; // Si estamos en la última, volvemos a la primera
+        } else {
+            indice = indice + 1; // Avanzamos una imagen
+        }
+        document.getElementById("fotoActual").src = fotos[indice]; 
+    }
+</script>
+</body>
+</html>
