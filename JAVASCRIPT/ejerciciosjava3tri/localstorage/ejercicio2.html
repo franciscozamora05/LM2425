@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de tema</title>
+</head>
+<body>
+   <h1>Bienvenido a la web más absurda del mundo</h1> 
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nam vero autem? Consectetur maiores porro, a aliquam quis accusamus possimus excepturi ratione! Cumque ea tempora consectetur magni eligendi non impedit.</p>
+<button onclick="cambiarTema('claro')">Tema claro</button>
+<button onclick="cambiarTema('oscuro')">Tema oscuro</button>
+
+<script>
+
+    function cambiarTema(tema){
+        if (tema === 'oscuro') {
+            document.body.style.backgroundColor = 'black';
+            document.body.style.color = 'white';
+        } else {
+            document.body.style.backgroundColor = 'white';
+            document.body.style.color = 'black';
+        }
+        localStorage.setItem('tema', tema);//Guaradr el tema el localStorage
+    }
+function cargarTema() {
+    const temaGuardado = localStorage.getItem('tema')
+    if (temaGuardado) {
+        cambiarTema(temaGuardado);
+    }
+}
+window.onload =cargarTema;//Cargar el tema de la página
+</script>
+</body>
+</html>
