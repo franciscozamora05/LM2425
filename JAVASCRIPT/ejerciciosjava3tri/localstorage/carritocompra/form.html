@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Finalizar Compra - Tienda de Embutidos</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <h1>Finalizar Compra</h1>
+        <nav>
+            <a href="index.html">Volver a la tienda</a>
+        </nav>
+    </header>
+    <main>
+        <form id="form-compra" novalidate>
+            <h2>Datos del Cliente</h2>
+            <label>Nombre completo:
+                <input type="text" id="nombre" required>
+            </label>
+            <label>Email:
+                <input type="email" id="email" required>
+            </label>
+            <label>DNI:
+                <input type="text" id="dni" required pattern="[0-9]{8}[A-Za-z]">
+            </label>
+            <label>Dirección:
+                <input type="text" id="direccion" required>
+            </label>
+            <label>Tarjeta de crédito:
+                <input type="text" id="tarjeta" required pattern="\\d{16}">
+            </label>
+            <button type="submit">Confirmar Compra</button>
+            <p id="mensaje" style="margin-top:1rem;"></p>
+        </form>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const formulario = document.getElementById('form-compra');
+            const mensaje = document.getElementById('mensaje');
+            formulario.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const email = document.getElementById('email').value.trim();
+                const dni = document.getElementById('dni').value.trim();
+                const tarjeta = document.getElementById('tarjeta').value.trim();
+                const dniRegex = /^[0-9]{8}[A-Za-z]$/;
+                const tarjetaRegex = /^[0-9]{16}$/;
+                const emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+                let errores = [];
+                if (email && !emailRegex.test(email)) errores.push("email");
+                if (dni && !dniRegex.test(dni)) errores.push("DNI");
+                if (tarjeta && !tarjetaRegex.test(tarjeta)) errores.push("tarjeta");
+                if (errores.length > 0) {
+                    mensaje.textContent = "❌ Formato incorrecto en: " + errores.join(", ");
+                    mensaje.style.color = "red";
+                } else {
+                    mensaje.textContent = "✅ Gracias por su compra";
+                    mensaje.style.color = "green";
+                    localStorage.removeItem('carrito');
+                    formulario.reset();
+                }
+            });
+        });
+        </script>
+        
