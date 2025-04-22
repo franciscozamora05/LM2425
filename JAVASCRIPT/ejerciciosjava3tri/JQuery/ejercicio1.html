@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="eS">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery 1</title>
+    <script src="jquery-3.7.1.js.js"></script>
+</head>
+<body>
+    <h1>Ejercicio1</h1>
+    <p>Esto es un parráfo de ejemplo para ver que cosas hace JQuery. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aut soluta culpa tempora consectetur ipsa consequuntur, ipsam nemo architecto recusandae! Quo officiis harum fuga illum enim distinctio, magni deserunt rerum!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusantium quia dignissimos ab expedita, totam doloribus veniam facere in magni quibusdam! Nesciunt mollitia facere cum ab culpa expedita quaerat explicabo!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et pariatur dolore exercitationem labore, quod deserunt distinctio error quis recusandae officia nisi adipisci repellat asperiores, ipsum dolores esse soluta neque voluptatibus?</p>
+    <button id="boton1">Ocultar</button>
+    <button id="boton2">Aparecer</button>
+
+    <script>
+         $(document).ready(function()
+        {
+            $("#boton1").click(function()
+        {
+            $("p").hide()
+        })
+
+        })
+            $("#boton2").click(function()
+        {
+            $("p").show()
+        })
+
+        
+    </script>
+</body>
+</html>
