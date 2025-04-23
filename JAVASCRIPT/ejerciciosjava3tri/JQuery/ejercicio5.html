@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery EJERCICIO 5</title>
+    <script src="jquery-3.7.1.js.js"></script>
+</head>
+<body>
+    <h2>FadeIn / FadeOut</h2>
+    <div id="fadeBox" style="width: 200px; height: 100px; background: coral;">Caja para fade</div>
+    <button id="fadeIn">fadeIn</button>
+    <button id="fadeOut">fadeOut</button>
+    <button id="fadeToggle">fadeToggle</button>
+    <script>
+    $('#fadeIn').click(() => $('#fadeBox').fadeIn());
+    $('#fadeOut').click(() => $('#fadeBox').fadeOut());
+    $('#fadeToggle').click(() => $('#fadeBox').fadeToggle());
+    // fadeToggle sirve para alternar entre fadeIn y fadeOut automáticamente.
+    </script>
+</body>
+</html>

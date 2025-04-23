@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JQuery 11</title>
+    <script src="jquery-3.7.1.js.js"></script>
+</head>
+<body>
+    <h2>empty() y Mostrar/Ocultar</h2>
+    <div id="cajaTexto"><span id="textoCaja">Texto a ocultar</span></div>
+    <button id="vaciar">Vaciar div</button>
+    <button id="toggleTexto">Mostrar/Ocultar texto</button>
+    <script>
+         $('#vaciar').click(() => $('#cajaTexto').empty());
+         $('#toggleTexto').click(() => $('#textoCaja').toggleClass('oculto'));
+    </script>
+</body>
+</html>

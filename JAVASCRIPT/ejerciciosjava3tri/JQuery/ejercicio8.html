@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JQuery 8</title>
+    <script src="jquery-3.7.1.js.js"></script>
+</head>
+<body>
+    <h2>attr() y html()</h2>
+    <img alt="imagen aleatoria" src="https://picsum.photos/700/400?random"> 
+    <button id="getSrc">Obtener src</button>
+    <button id="getHeaderHtml">Obtener HTML  encabezado</button>
+    <button id="getParrafoHtml">Obtener HTML párrafo</button>
+    <script>
+    $('#getSrc').click(() => alert($('#imagenTest').attr('src')));
+    $('#getHeaderHtml').click(() => alert($('#titulo').html()));
+    $('#getParrafoHtml').click(() => alert($('p').first().html()));
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JQuery 9</title>
+    <script src="jquery-3.7.1.js.js"></script>
+</head>
+<body>
+    <h2>Iconos en enlaces</h2>
+    <ul id="listaEnlaces">
+      <li><a href="#">Enlace 1</a></li>
+      <li><a href="#">Enlace 2</a></li>
+    </ul>
+    <script>
+       $('#listaEnlaces a').each(function () {
+      $(this).prepend('<img alt="imagen aleatoria" src="https://picsum.photos/700/400?random width="16" style="margin-right:5px;">');
+    });
+    </script>
+</body>
+</html>

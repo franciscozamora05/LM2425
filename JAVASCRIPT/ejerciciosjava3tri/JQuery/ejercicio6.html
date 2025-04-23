@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery EJERCICIO 6</title>
+    <script src="jquery-3.7.1.js.js"></script>
+</head>
+<body>
+    <h2>titulo 1</h2>
+    <h3>titulo 2</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum accusamus neque numquam fugiat perspiciatis, autem ex blanditiis natus, non, cum eveniet. Veritatis minus consequuntur, nisi sed quas ducimus nobis accusamus!</p>
+    <img alt="imagen aleatoria" src="https://picsum.photos/700/400?random"> 
+    <a href="#">Enlace 1</a>
+    <a href="#">Enlace 2</a>
+    <table border="1" id="tablaConteo">
+      <thead><tr><th>Elemento</th><th>Cantidad</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <button id="contar">Contar elementos</button>
+  <script>
+     $('#contar').click(() => {
+      const encabezados = $('h1, h2, h3').length;
+      const parrafos = $('p').length;
+      const imagenes = $('img').length;
+      const enlaces = $('a').length;
+      $('#tablaConteo tbody').html(`
+        <tr><td>Encabezados</td><td>${encabezados}</td></tr>
+        <tr><td>Párrafos</td><td>${parrafos}</td></tr>
+        <tr><td>Imágenes</td><td>${imagenes}</td></tr>
+        <tr><td>Enlaces</td><td>${enlaces}</td></tr>
+      `);
+    });
+  </script>
+</body>
+</html>
