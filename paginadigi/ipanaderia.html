@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Panadería del Sol</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff8f0;
+      color: #5a4635;
+    }
+    header {
+      background: #f7c59f;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      width: 100px;
+    }
+    h1 {
+      margin: 10px 0 0 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      background: #deab90;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('IMAGEN_HERO');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      font-size: 2rem;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .product {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .product:hover {
+      transform: scale(1.05);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      background: #5a4635;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="IMAGEN_LOGO" alt="Logo de la Panadería">
+  <h1>La Panadería del Sol</h1>
+</header>
+
+<nav>
+  <a href="#productos">Productos</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<div class="hero">
+  ¡El mejor pan bajo el sol!
+</div>
+
+<section id="productos">
+  <h2>Nuestros Productos</h2>
+  <div class="products">
+    <div class="product">
+      <img src="IMAGEN_PAN1" alt="Pan artesanal">
+      <h3>Pan Artesanal</h3>
+      <p>Hecho con masa madre y mucho amor.</p>
+    </div>
+    <div class="product">
+      <img src="IMAGEN_PASTEL" alt="Pastel de chocolate">
+      <h3>Pastel de Chocolate</h3>
+      <p>Esponjoso, dulce y perfecto para cualquier ocasión.</p>
+    </div>
+    <div class="product">
+      <img src="IMAGEN_PAN2" alt="Baguette francesa">
+      <h3>Baguette Francesa</h3>
+      <p>Crujiente por fuera, tierna por dentro.</p>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros">
+  <h2>Sobre Nosotros</h2>
+  <p>En La Panadería del Sol llevamos más de 20 años horneando con pasión y dedicación. Nuestro objetivo es ofrecerte los mejores sabores, utilizando ingredientes naturales y recetas tradicionales.</p>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>📍 Calle del Sol, 123 - Ciudad Dorada</p>
+  <p>📞 (123) 456-7890</p>
+  <p>📧 contacto@panaderiadelsol.com</p>
+</section>
+
+<footer>
+  © 2025 La Panadería del Sol. Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
