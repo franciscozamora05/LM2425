@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Información de Sevici</title>
+    <link rel="stylesheet" href="sevici.css">
+    <!-- Enlazar código por aquí -->
+</head>
+<body>
+    <div class="container">
+        <h1>Información de Sevici</h1>
+        <div class="buttons">
+            <button id="numStations">Calcular número de estaciones disponibles</button>
+            <button id="totalBikes">Mostrar total de bicicletas</button>
+            <button id="totalFree">Mostrar total de sitios libres</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <!-- Código de jQuery debajo-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        let estaciones = [];
+    
+        // Cargar datos una sola vez al iniciar
+        $.ajax({
+            url: "http://api.citybik.es/sevici.json",
+            method: "GET",
+            dataType: "json",
+            success: function (data) {
+                estaciones = data.network.stations;
+            },
+            error: function () {
+                $("#result").text("Error al obtener los datos de Sevici.");
+            }
+        });
+    
+        // Botón: Número de estaciones disponibles
+        $("#numStations").click(function () {
+            if (estaciones.length > 0) {
+                $("#result").text("Número de estaciones disponibles: " + estaciones.length);
+            } else {
+                $("#result").text("Los datos aún no se han cargado.");
+            }
+        });
+    
+        // Botón: Total de bicicletas
+        $("#totalBikes").click(function () {
+            if (estaciones.length > 0) {
+                const totalBikes = estaciones.reduce((acc, est) => acc + est.free_bikes, 0);
+                $("#result").text("Total de bicicletas disponibles: " + totalBikes);
+            } else {
+                $("#result").text("Los datos aún no se han cargado.");
+            }
+        });
+    
+        // Botón: Total de sitios libres
+        $("#totalFree").click(function () {
+            if (estaciones.length > 0) {
+                const totalFree = estaciones.reduce((acc, est) => acc + est.empty_slots, 0);
+                $("#result").text("Total de sitios libres: " + totalFree);
+            } else {
+                $("#result").text("Los datos aún no se han cargado.");
+            }
+        });
+    });
+    </script>    
+</body>
+</html>
